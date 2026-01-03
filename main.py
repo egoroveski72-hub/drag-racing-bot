@@ -28,3 +28,4 @@ async def get_id(message: types.Message):
 def setup_schedule():
     # Налаштування часу (можна змінити цифри годин)
     scheduler.add_job(market_alert, "cron", hour="0,4,
+                      
