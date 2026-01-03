@@ -27,15 +27,4 @@ async def get_id(message: types.Message):
 
 def setup_schedule():
     # Налаштування часу (можна змінити цифри годин)
-    scheduler.add_job(market_alert, "cron", hour="0,4,8,12,16,20", minute=0)
-    scheduler.add_job(race_alert, "cron", hour=19, minute=0)
-    scheduler.add_job(boss_alert, "cron", hour=21, minute=0)
-
-async def main():
-    logging.basicConfig(level=logging.INFO)
-    setup_schedule()
-    scheduler.start()
-    await dp.start_polling(bot)
-
-if __name__ == "__main__":
-    asyncio.run(main())
+    scheduler.add_job(market_alert, "cron", hour="0,4,
